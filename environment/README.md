@@ -38,6 +38,8 @@ update mysql.user set password=password('root') where user='root';
 flush privileges;
 exit; 
 -----------
+php artisan migrate
+----------------------
 sudo service mysqld restart
 cd cms
 php artisan serve --port=8080
