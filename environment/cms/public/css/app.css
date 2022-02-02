@@ -581,14 +581,14 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
 }
 
 @media (min-width: 576px) {
   .container-sm,
   .container {
-    max-width: 540px;
+    max-width: initial;
   }
 }
 
@@ -596,7 +596,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: initial;
   }
 }
 
@@ -605,7 +605,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 960px;
+    max-width: initial;
   }
 }
 
@@ -615,15 +615,14 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: initial;
   }
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+
 }
 
 .no-gutters {
@@ -1776,7 +1775,7 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  vertical-align: baseline;
   border-top: 1px solid #dee2e6;
 }
 
@@ -2117,7 +2116,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem + 6px);
   padding: 0.375rem 0.75rem;
   font-size: 0.9rem;
   font-weight: 400;
@@ -4518,7 +4517,7 @@ input[type=button].btn-block {
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
   margin-right: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.35rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4976,7 +4975,7 @@ input[type=button].btn-block {
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.95rem;
 }
 
 .card-subtitle {
@@ -5212,7 +5211,7 @@ input[type=button].btn-block {
 
 .pagination {
   display: flex;
-  padding-left: 0;
+  padding-left: 10;
   list-style: none;
   border-radius: 0.25rem;
 }

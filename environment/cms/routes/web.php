@@ -17,6 +17,14 @@ Route::post('/targets/update','TargetsController@update');
 //削除
 Route::delete('/target/{target}','TargetsController@destroy');
 
+//規約
+Route::post('formPost', 'TargetsController@formPost');
+
+//メール
+Route::post('sendMail', 'TargetsController@sendMail');
+
+
+
 //Auth
 Auth::routes();
 Route::get('/home', 'TargetsController@index')->name('home');

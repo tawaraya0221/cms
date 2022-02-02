@@ -7,58 +7,70 @@
 
         <!-- item_name -->
         <div class="form-group">
-           <label for="item_name">Title</label>
+           <label for="item_name">対象者</label>
            <input type="text" name="item_name" class="form-control" value="{{$target->item_name}}">
         </div>
         <!--/ item_name -->
         
         <!-- item_number -->
         <div class="form-group">
-           <label for="item_number">Number</label>
+           <label for="item_number">数量</label>
         <input type="text" name="item_number" class="form-control" value="{{$target->item_number}}">
         </div>
         <!--/ item_number -->
 
-        <!-- item_amount -->
+        <!-- lent_or_borrowed -->
+        <!--
         <div class="form-group">
-           <label for="item_amount">Amount</label>
-        <input type="text" name="item_amount" class="form-control" value="{{$target->item_amount}}">
+        <label for="lent_or_borrowed">貸したか借りたか</label>
+        <input type="text" name="lent_or_borrowed" class="form-control border border-danger" placeholder="再度選択してください" readonly>
+        <input type="radio" name="lent_or_borrowed" value="貸した">
+        貸した
+        <input type="radio" name="lent_or_borrowed" value="借りた">
+        借りた
         </div>
-        <!--/ item_amount -->
+        
+    -->
+        <!--/ lent_or_borrowed -->
+        
+        <div class="form-group">
+        <label for="lent_or_borrowed">貸したか借りたか</label>
+        <input type="text" name="lent_or_borrowed" class="form-control" value="{{$target->lent_or_borrowed}}" placeholder="[貸した]か[借りた]のどちらかのみ">
+        </div>
         
         <!-- target_person -->
         <div class="form-group">
-           <label for="target_person">target_person</label>
+           <label for="target_person">対象者</label>
             <input type="text" name="target_person" class="form-control" value="{{$target->target_person}}"/>
         </div>
         <!--/ target_person -->
         
-        <!-- lent_or_borrowed -->
+        <!-- target_mail -->
         <div class="form-group">
-           <label for="lent_or_borrowed">lent_or_borrowed</label>
-            <input type="text" name="lent_or_borrowed" class="form-control" value="{{$target->lent_or_borrowed}}"/>
+           <label for="target_mail">対象者メールアドレス</label>
+            <input type="text" name="target_mail" class="form-control" value="{{$target->target_mail}}"/>
         </div>
-        <!--/ lent_or_borrowed -->
+        <!--/ target_mail -->
         
         <!-- execution_date -->
         <div class="form-group">
-           <label for="execution_date">execution_date</label>
-            <input type="datatime" name="execution_date" class="form-control" value="{{$target->execution_date}}"/>
+           <label for="execution_date">実行日</label>
+            <input type="date" name="execution_date" class="form-control" value="{{$target->execution_date}}"/>
         </div>
         <!--/ execution_date -->
         
         <!-- deadline -->
         <div class="form-group">
-           <label for="deadline">deadline</label>
-            <input type="datatime" name="deadline" class="form-control" value="{{$target->deadline}}"/>
+           <label for="deadline">期日</label>
+            <input type="date" name="deadline" class="form-control" value="{{$target->deadline}}"/>
         </div>
         <!--/ deadline -->
         
-        <!-- Saveボタン/Backボタン -->
+        <!-- 保存ボタン/戻るkボタン -->
         <div class="well well-sm">
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">保存</button>
             <a class="btn btn-link pull-right" href="{{ url('/') }}">
-                Back
+                戻る
             </a>
         </div>
         <!--/ Saveボタン/Backボタン -->

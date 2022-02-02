@@ -17,22 +17,30 @@ class CreateTargetsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             //---------------追加---------------------
-            //物の名前(お金の場合は説明を書く)
+            //[借りたor貸した]名前or金額
             $table->string('item_name');
-            //物の数(ない場合は0個)
+            
+            //数量(お金の場合は0個)
             $table->integer('item_number');
-            //物の金額(ない場合は0円)
-            $table->integer('item_amount');
-            //画像アップロード機能
-            $table->string('item_img');
-            //誰に貸したかor誰から借りたか
-            $table->string('target_person');
+            
             //貸したか借りたか
             $table->string('lent_or_borrowed');
-            //借りた日or貸した日
-            $table->datetime('execution_date');
-            //期限（いつまでに返すか）
-            $table->datetime('deadline');
+            
+            //誰に貸したかor誰から借りたか
+            $table->string('target_person');
+            
+            //対象者メールアドレス
+            $table->string('target_mail');
+            
+            //実行日
+            $table->date('execution_date');
+            
+            //期日（いつまでに返すか）
+            $table->date('deadline');
+            
+            //画像アップロード機能
+            $table->string('item_img');
+            
             //-----------ここまで追加---------------------
             $table->timestamps();
         });
